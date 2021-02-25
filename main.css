@@ -1,0 +1,200 @@
+/* Esercizio 1  */
+
+.ex-1-square {
+  transition: background-color 3s;
+}
+.ex-1-square:hover {
+  background-color: red;
+}
+/* Esercizio 2  */
+
+.ex-2-square {
+  transition: width 3s;
+}
+.ex-2-square:hover {
+  width: 100%;
+}
+/* Esercizio 3  */
+
+.ex-3-square {
+  transition: border-radius 3s;
+}
+.ex-3-square:hover {
+  border-radius: 50%;
+}
+/* Esercizio 4  */
+
+.ex-4-square {
+  transition: opacity 3s;
+}
+.ex-4-square:hover {
+  opacity: 0;
+}
+
+/* Esercizio 5  */
+
+.ex-5-square {
+  transition: transform 3s;
+}
+.ex-5-square:hover {
+  transform: scale(3);
+}
+.ex-5-square:active {
+  transform: scale(0.3);
+}
+
+/* Esercizio 6  */
+
+.ex-6-img {
+  transition: filter 3s;
+}
+.ex-6-img:hover {
+  filter: grayscale();
+}
+/* Esercizio 7  */
+
+.ex-7-img {
+  transition: filter 3s;
+}
+.ex-7-img:hover {
+  filter: sepia();
+}
+
+/* Esercizio 8  */
+
+.ex-8-img {
+  transition: filter 3s, border-radius 1.5s;
+}
+.ex-8-img:hover {
+  border-radius: 20px;
+  filter: saturate(0.2);
+}
+
+/* volevo scrivere border radius sotto 
+(come indentazione vista a lezione)
+ma prettier non mi lasciava farlo */
+
+/* Esercizio 9  */
+
+.ex-9-img {
+  transition: transform 2s, filter 3s, border-radius 0.3s;
+}
+.ex-9-img:hover {
+  transform: scale(1.5);
+  filter: saturate(0.3);
+  border-radius: 25px;
+}
+
+/* Esercizio 10  */
+
+.ex-10-icon.fa-circle-notch {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Esercizio 11  */
+
+.ex-11-icon.fa-circle-notch:hover {
+  animation: screw 1.5s 1;
+}
+
+@keyframes screw {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* Esercizio 12  */
+
+.ex-12-top-white {
+  transition: left 1s ease-in-out;
+}
+
+.ex-12-bottom-white {
+  transition: right 1s ease-in-out;
+}
+
+.ex-12-button:hover .ex-12-top-white {
+  left: 60%;
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+  right: 60%;
+}
+
+/* Esercizio 13  */
+
+.ex-13-button:hover .ex-13-top-white {
+  animation: spinTop 1s 1 forwards;
+}
+
+@keyframes spinTop {
+  0% {
+    top: -10px;
+    left: 10%;
+  }
+  22% {
+    top: -10px;
+    left: 90%;
+  }
+  44% {
+    top: 90%;
+    left: 90%;
+  }
+  66% {
+    top: 90%;
+    left: -10%;
+  }
+  88% {
+    top: -10px;
+    left: -10%;
+  }
+  100% {
+    top: -10px;
+    left: 10%;
+  }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+  animation: spinbottom 1s 1 forwards;
+}
+
+@keyframes spinbottom {
+  0% {
+    bottom: -10px;
+    right: 20%;
+  }
+  22% {
+    bottom: -10px;
+    right: 90%;
+  }
+  44% {
+    bottom: 90%;
+    right: 90%;
+  }
+  66% {
+    bottom: 90%;
+    right: -20%;
+  }
+  88% {
+    bottom: -10px;
+    right: -20%;
+  }
+  100% {
+    bottom: -10px;
+    right: 20%;
+  }
+}
